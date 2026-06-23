@@ -114,9 +114,19 @@
     .card--grua:hover { border-color: color-mix(in srgb, var(--grua) 45%, transparent); box-shadow: 0 20px 50px -30px var(--grua); }
     .card--agua:hover  { border-color: color-mix(in srgb, var(--agua) 45%, transparent); box-shadow: 0 20px 50px -30px var(--agua); }
 
-    .card-icon { font-size: 32px; }
-    .card--grua .card-icon { color: var(--grua); }
-    .card--agua .card-icon { color: var(--agua); }
+    .card-marks { display: flex; gap: 10px; }
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      font-size: 24px;
+    }
+    .card--grua .mark { color: var(--grua); background: color-mix(in srgb, var(--grua) 14%, transparent); border: 1px solid color-mix(in srgb, var(--grua) 30%, transparent); }
+    .card--agua .mark { color: var(--agua); background: color-mix(in srgb, var(--agua) 14%, transparent); border: 1px solid color-mix(in srgb, var(--agua) 30%, transparent); }
+    .card-name-plus { color: var(--muted); font-weight: 500; }
 
     .card-name {
       font-family: var(--font-display);
@@ -178,9 +188,12 @@
 
     <a class="card card--grua" href="https://grua-cordillera.vercel.app" target="_blank" rel="noopener">
       <span class="card-stripe"></span>
-      <i class="ti ti-tow-truck card-icon"></i>
+      <div class="card-marks">
+        <span class="mark"><i class="ti ti-tow-truck"></i></span>
+        <span class="mark"><i class="ti ti-tool"></i></span>
+      </div>
       <div>
-        <div class="card-name">GrúasCordillera</div>
+        <div class="card-name">GrúasCordillera <span class="card-name-plus">+ Mecánica</span></div>
         <p class="card-tagline">Grúa plataforma liviana y auxilio mecánico para emergencias en ruta y alta montaña.</p>
       </div>
       <div class="chips">
@@ -194,7 +207,9 @@
 
     <a class="card card--agua" href="https://aguacima.vercel.app" target="_blank" rel="noopener">
       <span class="card-stripe"></span>
-      <i class="ti ti-droplet card-icon"></i>
+      <div class="card-marks">
+        <span class="mark"><i class="ti ti-droplet-filled"></i></span>
+      </div>
       <div>
         <div class="card-name">AguaCima</div>
         <p class="card-tagline">Transporte de agua potable a zonas mineras de alta montaña donde otros no llegan.</p>
