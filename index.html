@@ -125,8 +125,10 @@
       font-size: 24px;
     }
     .card--grua .mark { color: var(--grua); background: color-mix(in srgb, var(--grua) 14%, transparent); border: 1px solid color-mix(in srgb, var(--grua) 30%, transparent); }
+    .card--grua .mark--alt { color: var(--text); }
     .card--agua .mark { color: var(--agua); background: color-mix(in srgb, var(--agua) 14%, transparent); border: 1px solid color-mix(in srgb, var(--agua) 30%, transparent); }
     .card-name-plus { color: var(--muted); font-weight: 500; }
+    .card-name-plus .plus { color: var(--grua); font-weight: 700; }
 
     .card-name {
       font-family: var(--font-display);
@@ -189,11 +191,11 @@
     <a class="card card--grua" href="https://grua-cordillera.vercel.app" target="_blank" rel="noopener">
       <span class="card-stripe"></span>
       <div class="card-marks">
-        <span class="mark"><i class="ti ti-tow-truck"></i></span>
-        <span class="mark"><i class="ti ti-tool"></i></span>
+        <span class="mark"><i class="ti ti-truck-delivery"></i></span>
+        <span class="mark mark--alt"><i class="ti ti-tool"></i></span>
       </div>
       <div>
-        <div class="card-name">GrúasCordillera <span class="card-name-plus">+ Mecánica</span></div>
+        <div class="card-name">GrúasCordillera <span class="card-name-plus"><span class="plus">+</span> Mecánica</span></div>
         <p class="card-tagline">Grúa plataforma liviana y auxilio mecánico para emergencias en ruta y alta montaña.</p>
       </div>
       <div class="chips">
