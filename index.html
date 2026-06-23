@@ -83,11 +83,14 @@
     /* CARDS GRID */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       gap: 24px;
       max-width: 900px;
       margin: 0 auto 80px;
       padding: 0 24px;
+    }
+    @media (min-width: 760px) {
+      .cards { grid-template-columns: 1fr 1fr; }
     }
     .card {
       position: relative;
@@ -167,9 +170,16 @@
     }
 
     @media (max-width: 620px) {
-      nav    { padding: 16px 20px; }
-      .hero  { padding: 56px 20px 48px; }
-      .cards { padding: 0 16px; }
+      nav     { padding: 16px 20px; }
+      .hero   { padding: 56px 20px 44px; }
+      .hero p { font-size: 15px; }
+      .cards  { padding: 0 16px; margin-bottom: 56px; gap: 18px; }
+      .card   { padding: 26px 22px 24px; }
+      footer  { padding: 22px 20px; }
+    }
+    @media (max-width: 400px) {
+      .hero h1 br { display: none; }
+      .card-name  { font-size: 20px; }
     }
   </style>
 </head>
